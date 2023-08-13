@@ -41,3 +41,10 @@ class My_Sills(models.Model):
     
     def __str__(self):
         return self.title
+
+class My_silka(models.Model):
+    title = models.CharField(max_length=255)
+    silkasi = models.CharField(max_length=255)
+    
+    def __str__(self):
+        return self.title
