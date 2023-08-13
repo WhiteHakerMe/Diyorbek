@@ -2,12 +2,14 @@ from django.shortcuts import render
 from .models import *
 # Create your views here.
 def index(request):
+    About_Me = My_About.objects.all()
     silka_s = My_silka.objects.all()
     My_Sill_s = My_Sills.objects.all()
     Post_post = Post_Dizayne.objects.all()
     Home_r = HomeTitle.objects.all()
     Category_ss = Category.objects.all()
     ctx = {
+        "About_Me":About_Me,
         "silka_s":silka_s,
         "My_Sill_s": My_Sill_s,
         "Post_post":Post_post,
